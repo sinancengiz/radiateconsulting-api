@@ -34,7 +34,7 @@ class StoresController < ApplicationController
 
   def store_params
     # whitelist params
-    params.permit(:title, :created_by)
+    params.permit(:title, :owner, :created_by)
   end
 
   def set_store
