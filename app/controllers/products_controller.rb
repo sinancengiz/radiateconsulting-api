@@ -34,7 +34,7 @@ class ProductsController < ApplicationController
 
   def product_params
     # whitelist params
-    params.permit(:title, :created_by)
+    params.permit(:name, :product_type, :created_by)
   end
 
   def set_product
