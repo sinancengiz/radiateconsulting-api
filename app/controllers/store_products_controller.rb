@@ -3,7 +3,7 @@ class StoreProductsController < ApplicationController
 
   # GET /store_product_product_products
   def index
-    @store_products = StoreProduct.where({store_id: params[:store_id]})
+    @store_products = StoreProduct.where({store_id: params[:store_id]}).order("id DESC")
     json_response(@store_products)
   end
 
