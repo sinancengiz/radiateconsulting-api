@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_many :store_products
+  has_many :store_products, dependent: :destroy
   
   # validation
   validates_presence_of :name
